@@ -7,6 +7,7 @@ mkdirSync(dirname(env.dbPath), { recursive: true });
 
 export const db = new Database(env.dbPath, { create: true });
 db.exec("PRAGMA journal_mode = WAL;");
+db.exec("PRAGMA busy_timeout = 5000;");
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS items (
