@@ -10,7 +10,8 @@
     "ingest": "bun run src/index.ts --ingest",
     "digest": "bun run src/index.ts --digest",
     "typecheck": "tsc --noEmit",
-    "lint": "biome check --write ."
+    "lint": "biome ci .",
+    "lint:fix": "biome check --write ."
   },
   "dependencies": {
     "node-cron": "^3.0.3",
