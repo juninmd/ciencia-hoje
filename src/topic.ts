@@ -1,5 +1,6 @@
-// Config específica deste agente. Edite feeds/prompt à vontade.
-export const topic = {
+import { defineTopic } from "@juninmd/digest-kit";
+
+export const topic = defineTopic({
   name: "ciencia-hoje",
   title: "Ciência Hoje",
   emoji: "🔬",
@@ -17,4 +18,4 @@ Regras do digest:
     { name: "Nature", url: "https://www.nature.com/nature.rss" },
     { name: "arXiv CS", url: "http://export.arxiv.org/rss/cs" },
   ],
-};
+});
